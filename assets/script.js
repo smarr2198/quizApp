@@ -1,10 +1,11 @@
 const startBtn = document.getElementById("start");
+const restartBtn = document.getElementById("restart");
 const questionDiv = document.getElementById("question");
 const answersBtnA = document.getElementById("answersA");
 const answersBtnB = document.getElementById("answersB");
 const answersBtnC = document.getElementById("answersC");
 let highScoreDiv = document.querySelector("#scores");
-let highScore = " ";
+let highScore = [];
 let hasWon = false;
 let timerElement = document.querySelector("#timer");
 let i = 0;
@@ -67,18 +68,23 @@ function startGame() {
   answersBtnC.innerHTML = questions[i].answersC;
 }
 function recordHighScore() {
-  highScore = timerCount;
+  highScore = timerCount - 1;
   window.localStorage.setItem("score", JSON.stringify(highScore));
   displayHighScore();
 }
 function displayHighScore() {
-  JSON.parse(window.localStorage.getItem("score"));
+  JSON.parse(window.localStorage.getItem(highScore));
 
   highScoreDiv.innerHTML = highScore;
 }
 
 startBtn.addEventListener("click", startGame);
 startBtn.addEventListener("click", startTimer);
+restartBtn.addEventListener("click", startTimer);
+restartBtn.addEventListener("click", function () {
+  i = 0;
+  startGame();
+});
 
 answersBtnA.addEventListener("click", function () {
   if (questions[i].correct === questions[i].answersA) {
