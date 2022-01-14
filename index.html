@@ -5,22 +5,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/main.css">
     <title>Document</title>
 </head>
 
-<body>
-    <h1>Coding Quiz Challenge</h1>
-    <button id="start">Start Quiz</button>
-    <button id="restart">Restart</button>
+<body class="p-3">
+    <h1 class="text-center">Coding Quiz Challenge</h1>
+    <button class="btn btn-primary btn-lg" id="start">Start Quiz</button>
+    <button class="btn btn-primary btn-lg" id="restart">Restart</button>
     <!-- Questions and Answers -->
     <h2 id="question"></h2>
-    <button id="answersA"></button>
-    <button id="answersB"></button>
-    <button id="answersC"></button>
+    <div class="d-grid gap-2">
+        <button class="btn btn-primary btn-lg" id="answersA"></button>
+        <button class="btn btn-primary btn-lg" id="answersB"></button>
+        <button class="btn btn-primary btn-lg" id="answersC"></button>
+    </div>
     <div id="timer"></div>
     <h3>High Scores:</h3>
-    <div><span id="scores"></span></div>
+    <div><span class="" id="scores"></span></div>
     <script src="./assets/script.js"></script>
 </body>
 

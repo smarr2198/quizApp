@@ -70,7 +70,7 @@ function startGame() {
 function recordHighScore() {
   const highScores =
     JSON.parse(window.localStorage.getItem("highScores")) || [];
-  highScore = timerCount - 1;
+  highScore = timerCount;
   const initials = prompt("Enter your intials");
   let userScore = {
     score: highScore,
