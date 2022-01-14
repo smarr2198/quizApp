@@ -66,6 +66,8 @@ function startGame() {
   answersBtnA.innerHTML = questions[i].answersA;
   answersBtnB.innerHTML = questions[i].answersB;
   answersBtnC.innerHTML = questions[i].answersC;
+
+  startBtn.style.visibility = "hidden";
 }
 function recordHighScore() {
   const highScores =
@@ -82,8 +84,9 @@ function recordHighScore() {
 }
 function displayHighScore() {
   const highScores = JSON.parse(window.localStorage.getItem("highScores"));
+  highScores.sort((a, b) => (a.score > b.score ? -1 : 1));
   highScores.forEach((score) => {
-    highScoreDiv.innerHTML += `${score.initials}: ${score.score}`;
+    highScoreDiv.innerHTML += `(${score.initials}:${score.score})    `;
   });
 }
 
