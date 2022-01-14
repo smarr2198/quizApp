@@ -19,3 +19,15 @@
   flex-direction: column;
   justify-content: center;
 }
+.bgc-nav {
+  background-color: lightskyblue;
+}
+.bgc {
+  background-color: lightgray;
+}
+.p-b {
+  padding-bottom: 12px;
+}
+.p-t {
+  padding-top: 12px;
+}
