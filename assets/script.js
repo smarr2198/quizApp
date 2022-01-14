@@ -68,22 +68,29 @@ function startGame() {
   answersBtnC.innerHTML = questions[i].answersC;
 }
 function recordHighScore() {
+  const highScores =
+    JSON.parse(window.localStorage.getItem("highScores")) || [];
   highScore = timerCount - 1;
-  window.localStorage.setItem("score", JSON.stringify(highScore));
+  const initials = prompt("Enter your intials");
+  let userScore = {
+    score: highScore,
+    initials: initials,
+  };
+  highScores.push(userScore);
+  window.localStorage.setItem("highScores", JSON.stringify(highScores));
   displayHighScore();
 }
 function displayHighScore() {
-  JSON.parse(window.localStorage.getItem(highScore));
-
-  highScoreDiv.innerHTML = highScore;
+  const highScores = JSON.parse(window.localStorage.getItem("highScores"));
+  highScores.forEach((score) => {
+    highScoreDiv.innerHTML += `${score.initials}: ${score.score}`;
+  });
 }
 
 startBtn.addEventListener("click", startGame);
 startBtn.addEventListener("click", startTimer);
-restartBtn.addEventListener("click", startTimer);
 restartBtn.addEventListener("click", function () {
-  i = 0;
-  startGame();
+  location.reload();
 });
 
 answersBtnA.addEventListener("click", function () {
