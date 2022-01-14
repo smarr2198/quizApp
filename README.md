@@ -2,15 +2,15 @@
 
 ## Description
 
-This is a random password generator program. It has a generate Password button that will begin the program with window prompts that will ask you specifically how you would like your password.
+This is a Quiz application that will ask you a series of 3 questions about javascript programming.
 
-The window prompts that come up will ask you how long you will like your password. It only accept a minimum of 8 characters to a max of 128 characters, if you want lower case letters, uppercase letters, numbers, and/or if you want special characters/symbols in your password. once accepting or denying all of these specifications it will generate your random password in the "your secure password" text box.
+To start the quiz you will click the start quiz button that will show you a question and 3 possible answers. A timer will start at 20 seconds and count down. if you get a question wrong you stay on the same question but 2 seconds will be subtracted from the timer. if you get the question right it will initialize the next question. if all 3 questions are answered correctly before the timer hits zero you will get a window prompt that asks for your intials and your score will be recorded below. if you hit the restart button the quiz will start over.
 
 ## Screenshot
 
-![Portfolio that has a navigation bar, 3 sections that include an About Me, Projects section, as well as a section for my links to github, linkedin, and my email address i can be reached at.](./assets/img/quizRunning.png)(./assets/img/quizStart.png)
+![Quiz app that has a start game button, a restart button. Questions will prompt on middle of screen with 3 answer buttons below. Timer and high scores will be shown under all content. ](./assets/img/quizRunning.png)(./assets/img/quizStart.png)
 
 ## Links to Application
 
-- Here is the link to the repo: [smarr2198/repo](https://github.com/smarr2198/PasswordGenerator)
-- Here is the link to the pages: [smarr2198/pages](https://smarr2198.github.io/PasswordGenerator/)
+- Here is the link to the repo: [smarr2198/repo](https://github.com/smarr2198/quizApp)
+- Here is the link to the pages: [smarr2198/pages](https://smarr2198.github.io/quizApp/)
