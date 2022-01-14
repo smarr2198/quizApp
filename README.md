@@ -8,7 +8,9 @@ To start the quiz you will click the start quiz button that will show you a ques
 
 ## Screenshot
 
-![Quiz app that has a start game button, a restart button. Questions will prompt on middle of screen with 3 answer buttons below. Timer and high scores will be shown under all content. ](./assets/img/quicRunning.png)(./assets/img/quizStart.png)
+![Quiz app that has a start game button, a restart button. Questions will prompt on middle of screen with 3 answer buttons below. Timer and high scores will be shown under all content. the first picture will show the quiz running.](./assets/img/quicRunning.png)
+
+![the second picture will show the game when it is at its home page.](./assets/img/quizStart.png)
 
 ## Links to Application
 
