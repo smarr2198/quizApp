@@ -1,0 +1,21 @@
+.fs-1 {
+  font-size: xx-large;
+}
+.fw-b {
+  font-weight: bolder;
+}
+.m-b {
+  margin-bottom: 3rem;
+}
+.m-b-s {
+  margin-bottom: 1.5rem;
+}
+.fs-2 {
+  font-size: large;
+}
+.container {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
