@@ -31,35 +31,36 @@ function startTimer() {
     if (timerCount === 0) {
       // Clears interval
       clearInterval(timer);
+      recordHighScore();
       //loseGame();
     }
   }, 1000);
 }
-
+// array of questions and answers that will trigger when start game button is hit
 const questions = [
   {
-    title: "What is David Blaines first Name",
-    answersA: "David",
-    answersB: "Jeff",
-    answersC: "Jack",
-    correct: "David",
+    title: "Inside which HTML element do we link the JavaScript?",
+    answersA: "script",
+    answersB: "js",
+    answersC: "a",
+    correct: "script",
   },
   {
-    title: "What is David Blaines Last Name",
-    answersA: "Blaine",
-    answersB: "Angel",
-    answersC: "Jefferson",
-    correct: "Blaine",
+    title: "How do you write HelloWorld in an alert box?",
+    answersA: "msg('HelloWolrd')",
+    answersB: "alert('HelloWorld')",
+    answersC: "alertBox('HelloWorld')",
+    correct: "alert('HelloWorld')",
   },
   {
-    title: "What is David Blaines Profession",
-    answersA: "Clown",
-    answersB: "Software Dev",
-    answersC: "Magician",
-    correct: "Magician",
+    title: "How do you create a function in JavaScript?",
+    answersA: "function:myFunction()",
+    answersB: "function=myFunction()",
+    answersC: "function myFunction()",
+    correct: "function myFunction()",
   },
 ];
-
+// this function is linked to the startGameBtn and will initialize the questions array
 function startGame() {
   questionDiv.innerHTML = questions[i].title;
 
@@ -69,6 +70,7 @@ function startGame() {
 
   startBtn.style.visibility = "hidden";
 }
+// this function will record your score to local storage
 function recordHighScore() {
   const highScores =
     JSON.parse(window.localStorage.getItem("highScores")) || [];
@@ -82,6 +84,7 @@ function recordHighScore() {
   window.localStorage.setItem("highScores", JSON.stringify(highScores));
   displayHighScore();
 }
+// displays high score on website page in order from highest score to lowest score with users initials
 function displayHighScore() {
   const highScores = JSON.parse(window.localStorage.getItem("highScores"));
   highScores.sort((a, b) => (a.score > b.score ? -1 : 1));
@@ -89,7 +92,7 @@ function displayHighScore() {
     highScoreDiv.innerHTML += `(${score.initials}:${score.score})    `;
   });
 }
-
+// event listeners
 startBtn.addEventListener("click", startGame);
 startBtn.addEventListener("click", startTimer);
 restartBtn.addEventListener("click", function () {
